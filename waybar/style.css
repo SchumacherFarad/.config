@@ -1,0 +1,154 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  background-color: transparent;
+  color: rgb(167, 133, 197);
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: 'CaskaydiaMono Nerd Font';
+  font-size: 12px;
+}
+
+.modules-left {
+  margin-left: 0px;
+}
+.modules-right {
+  margin-right: 0px;
+}
+
+#user{
+  margin-left: 0px;
+}
+
+#cpu,
+#memory,
+#temperature {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#usages {
+  margin-left: 144px;
+  padding: 0 10px;
+  background-color: rgba(6, 13, 31, 0.7);
+  border: 1px solid #241d51;
+  border-radius: 30px;
+}
+
+#right-bar {
+  margin-right: 0px;
+  padding: 0 10px;
+  background-color: rgba(6, 13, 31, 0.7);
+  border: 1px solid #241d51;
+  border-radius: 30px;
+}
+
+#workspaces {
+  margin-left : 100px;
+  padding: 0 10px;
+  background-color: rgba(6, 13, 31, 0.7);
+  border: 1px solid #241d51;
+  border-radius: 30px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#cpu,
+#battery,
+#pulseaudio,
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+
+#tray {
+  margin-right: 16px;
+}
+
+#bluetooth {
+  margin-right: 5px;
+}
+
+#network {
+  margin-right: 13px;
+}
+
+#custom-expand-icon {
+  margin-right: 18px;
+}
+
+#custom-hyprsunset {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 11px;
+    color: #ffffff;
+}
+
+#custom-hyprsunset.active {
+    color: #89b4fa;
+    background-color: transparent;
+}
+
+#custom-hyprsunset.inactive {
+    color: #f9e2af;
+    font-size: 11px;
+    background-color: transparent;
+}
+
+#custom-hyprsunset:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+tooltip {
+  padding: 2px;
+}
+
+#custom-update {
+  font-size: 10px;
+}
+
+#clock {
+  margin-left: 8.75px;
+  padding: 0 30px;
+  color: rgb(195, 126, 255);
+  background-color: rgba(6, 13, 31, 0.9);
+  border: 1px solid #241d51;
+  border-radius: 30px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 8.75px;
+  font-size: 10px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+#mpris {
+  margin-right: 144px;
+  padding: 0 30px;
+  font-size: 13px;
+  font-family: "PixelifySans";
+  font-weight: bolder;
+  background-color: rgba(6, 13, 31, 0.7);
+  border: 1px solid #241d51;
+  border-radius: 30px;
+}
