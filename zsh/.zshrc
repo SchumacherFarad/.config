@@ -65,3 +65,44 @@ if [[ -o interactive ]]; then
   command -v fastfetch >/dev/null && fastfetch
 fi
 
+
+
+ex () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' dosyası açılamıyor..." ;;
+    esac
+  else
+    echo "'$1' geçerli bir dosya değil!"
+  fi
+}
+
+
+mkcd() {
+  mkdir -p "$1" && cd "$1"
+}
+
+killport() {
+  if [ -z "$1" ]; then
+    echo "Hangi portu öldüreceğimi söylemelisin (örn: killport 3000)"
+    return
+  fi
+  # Verilen portu kullanan PID'yi bul ve zorla kapat
+  lsof -ti:$1 | xargs kill -9
+  echo "Port $1 üzerindeki işlemler sonlandırıldı."
+}
+
+alias archclean='echo "📦 Yetim Paketler:" && pacman -Qtdq && echo "🧹 Cache temizleniyor..." && sudo pacman -Sc'
+
+alias davinci-resolve='LD_PRELOAD="/usr/lib/libglib-2.0.so /usr/lib/libgobject-2.0.so /usr/lib/libgio-2.0.so /usr/lib/libgmodule-2.0.so" /opt/resolve/bin/resolve'
