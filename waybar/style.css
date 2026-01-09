@@ -121,7 +121,7 @@ tooltip {
 }
 
 #clock {
-  margin-left: 8.75px;
+  margin-left: 5px;
   padding: 0 30px;
   color: rgb(195, 126, 255);
   background-color: rgba(6, 13, 31, 0.9);
@@ -135,8 +135,9 @@ tooltip {
 
 #custom-screenrecording-indicator {
   min-width: 12px;
-  margin-left: 8.75px;
+  margin-left: 5px;
   font-size: 10px;
+  padding-bottom: 1px;
 }
 
 #custom-screenrecording-indicator.active {
@@ -151,4 +152,12 @@ tooltip {
   background-color: rgba(6, 13, 31, 0.7);
   border: 1px solid #241d51;
   border-radius: 30px;
+}
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 7.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
 }
