@@ -1,8 +1,8 @@
-@import "../omarchy/current/theme/waybar.css";
+@import "colors.css";
 
 * {
   background-color: transparent;
-  color: rgb(167, 133, 197);
+  color: @primary;
   border: none;
   border-radius: 0;
   min-height: 0;
@@ -31,24 +31,24 @@
 #usages {
   margin-left: 144px;
   padding: 0 10px;
-  background-color: rgba(6, 13, 31, 0.7);
-  border: 1px solid #241d51;
+  background-color: alpha(@surface, 0.7);
+  border: 1px solid @outline_variant;
   border-radius: 30px;
 }
 
 #right-bar {
   margin-right: 0px;
   padding: 0 10px;
-  background-color: rgba(6, 13, 31, 0.7);
-  border: 1px solid #241d51;
+  background-color: alpha(@surface, 0.7);
+  border: 1px solid @outline_variant;
   border-radius: 30px;
 }
 
 #workspaces {
-  margin-left : 100px;
+  margin-left : 5px;
   padding: 0 10px;
-  background-color: rgba(6, 13, 31, 0.7);
-  border: 1px solid #241d51;
+  background-color: alpha(@surface, 0.7);
+  border: 1px solid @outline_variant;
   border-radius: 30px;
 }
 
@@ -93,16 +93,16 @@
     margin-right: 10px;
     margin-left: 10px;
     font-size: 11px;
-    color: #ffffff;
+    color: @on_surface;
 }
 
 #custom-hyprsunset.active {
-    color: #89b4fa;
+  color: @primary;
     background-color: transparent;
 }
 
 #custom-hyprsunset.inactive {
-    color: #f9e2af;
+    color: @secondary;
     font-size: 11px;
     background-color: transparent;
 }
@@ -123,9 +123,9 @@ tooltip {
 #clock {
   margin-left: 5px;
   padding: 0 30px;
-  color: rgb(195, 126, 255);
-  background-color: rgba(6, 13, 31, 0.9);
-  border: 1px solid #241d51;
+  color: @primary;
+  background-color: alpha(@surface, 0.9);
+  border: 1px solid @outline_variant;
   border-radius: 30px;
 }
 
@@ -133,24 +133,15 @@ tooltip {
   opacity: 0;
 }
 
-#custom-screenrecording-indicator {
-  min-width: 12px;
-  margin-left: 5px;
-  font-size: 10px;
-  padding-bottom: 1px;
-}
 
-#custom-screenrecording-indicator.active {
-  color: #a55555;
-}
 #mpris {
   margin-right: 144px;
   padding: 0 30px;
   font-size: 13px;
   font-family: "PixelifySans";
   font-weight: bolder;
-  background-color: rgba(6, 13, 31, 0.7);
-  border: 1px solid #241d51;
+  background-color: alpha(@surface, 0.7);
+  border: 1px solid @outline_variant;
   border-radius: 30px;
 }
 #custom-voxtype {
@@ -159,5 +150,5 @@ tooltip {
 }
 
 #custom-voxtype.recording {
-  color: #a55555;
+  color: @error;
 }

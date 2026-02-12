@@ -1,0 +1,34 @@
+# Matugen Configuration
+# Generated for automatic theming with hyprpaper wallpaper
+
+[config]
+# Color scheme type: scheme-tonal-spot, scheme-vibrant, scheme-expressive, scheme-fidelity
+type = "scheme-fidelity"
+# Color mode: dark or light
+mode = "dark"
+# Contrast level: -1 to 1 (0 is standard)
+contrast = 0.0
+
+[config.custom_keywords]
+wallpaper_path = ""
+
+# Waybar colors template
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar-colors.css"
+output_path = "~/.config/waybar/colors.css"
+post_hook = "pkill -SIGUSR2 waybar"
+
+# Rofi colors template
+[templates.rofi]
+input_path = "~/.config/matugen/templates/rofi-colors.rasi"
+output_path = "~/.config/rofi/colors.rasi"
+
+# Hyprland colors template
+[templates.hyprland]
+input_path = "~/.config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/colors.conf"
+
+# Hyprlock colors template
+[templates.hyprlock]
+input_path = "~/.config/matugen/templates/hyprlock-colors.conf"
+output_path = "~/.config/hypr/hyprlock-colors.conf"
