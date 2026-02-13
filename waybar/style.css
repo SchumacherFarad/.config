@@ -90,24 +90,44 @@
 }
 
 #custom-hyprsunset {
-    margin-right: 10px;
-    margin-left: 10px;
-    font-size: 11px;
+    font-size: 14px;
     color: @on_surface;
+    min-width: 18px;
+    padding: 2px 4px 0 4px;
 }
 
 #custom-hyprsunset.active {
-  color: @primary;
+    color: @primary;
     background-color: transparent;
 }
 
 #custom-hyprsunset.inactive {
     color: @secondary;
-    font-size: 11px;
     background-color: transparent;
 }
 
 #custom-hyprsunset:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#custom-dnd {
+    font-size: 14px;
+    color: @on_surface;
+    min-width: 18px;
+    padding: 2px 4px 0 4px;
+}
+
+#custom-dnd.active {
+    color: @error;
+    background-color: transparent;
+}
+
+#custom-dnd.inactive {
+    color: @secondary;
+    background-color: transparent;
+}
+
+#custom-dnd:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -138,7 +158,7 @@ tooltip {
   margin-right: 144px;
   padding: 0 30px;
   font-size: 13px;
-  font-family: "PixelifySans";
+  font-family: "Pixelify Sans";
   font-weight: bolder;
   background-color: alpha(@surface, 0.7);
   border: 1px solid @outline_variant;

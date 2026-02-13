@@ -85,7 +85,7 @@
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
-    "on-click": "omarchy-menu power",
+    "on-click": "~/.local/bin/power-menu.sh",
     "states": {
       "warning": 20,
       "critical": 10
@@ -99,6 +99,14 @@
     "return-type": "json",
     "tooltip": true
   },
+  "custom/dnd": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/dnd-status.sh",
+    "on-click": "~/.config/waybar/scripts/dnd-toggle.sh",
+    "interval": 2,
+    "return-type": "json",
+    "tooltip": true
+  },
   "bluetooth": {
     "format": "",
     "format-disabled": "󰂲",
@@ -106,7 +114,7 @@
     "format-connected": "󰂱",
     "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "kitty --class floating_nmtui -e bluetuith"
+    "on-click": "kitty --class floating_nmtui -e bluetui"
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -125,6 +133,7 @@
     "modules": [
       "group/tray-expander",
       "bluetooth",
+      "custom/dnd",
       "custom/hyprsunset",
       "network",
       "pulseaudio",
