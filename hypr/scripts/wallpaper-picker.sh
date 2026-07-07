@@ -61,4 +61,7 @@ hyprctl hyprpaper wallpaper ",$selected_path" 2>/dev/null
 
 notify-send "Duvar Kağıdı Değiştirildi" "$(basename "$selected_path")"
 
+# Update quickshell colors
+~/.config/quickshell/qs-colors-update.sh & disown
+
 # Note: matugen-watcher will automatically detect the change and update colors

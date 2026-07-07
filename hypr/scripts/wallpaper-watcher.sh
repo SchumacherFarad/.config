@@ -72,6 +72,9 @@ run_matugen() {
     hyprctl reload 2>&1 | tee -a "$LOG_FILE"
     log "Reloaded Hyprland config"
     
+    # Update quickshell colors
+    "$HOME/.config/quickshell/qs-colors-update.sh" 2>&1 | tee -a "$LOG_FILE"
+
     log "Matugen completed successfully"
 }
 
